@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: antiquewhite;
+        }
+        table{
+            width: 60%;
+            padding: 60px;
+        }
+        tr{
+            border-bottom: 1px solid black;
+        }
+        
+        td{
+            width: 5%;
+            padding: 10px 20px;
+        }
+        .in_size{
+            width: 300px;
+            padding: 3px;
+        }
+        #btn{
+            padding: 10px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #address{
+            height: 100px;
+        }
+        
+       
+        
+    </style>
+</head>
+
+<body>
+    <form action="" method="get" onsubmit="return validation()">
+        <table >
+            <tr>
+                <td><label>First Name:</label></td>
+                <td><input type="text" id="firstname" class="in_size" name="userName" required><span id="firsNameCheck"></span></td>
+            </tr>
+            <tr>
+                <td><label>Last Name:</label></td>
+                <td><input type="text" id="lastname" name="userName" class="in_size" required><span id="lastNameCheck"></span></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" id="email" name="email" class="in_size" required> <span id="emailCheck"></span></td>
+            </tr>
+            <tr>
+                <td><label>Mobile:</label></td>
+                <td><input type="tel" id="Mobile" name="Mobile" class="in_size" required><span id="mobileCheck"></span></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td><input type="radio" id="gender" name="gender" required >Male  &nbsp; <input type="radio" id="gender" name="gender" required>Female &nbsp; <span id="genderCheck"></span></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+               <td><label >Date Of Birth:</label></td>
+               <td><input type="date" class="in_size" required> <span id="dateCheck"></span></td>
+            </tr>
+            <tr>
+                <td><label >Address:</label></td>
+                <td><textarea name="address" id="address" class="in_size" required></textarea> <span id="addressCheck"></span></td>
+            </tr>
+            <tr>
+                <td> <label>City:</label></td>
+                <td> <input type="text" id="city" class="in_size" required>
+                <span id="cityCheck"></span></td>
+            </tr>
+            <tr>
+                <td> <label >Area Pin:</label></td>
+                <td> <input type="number" id="pin" class="in_size" required> 
+                <span id="pinCheck"></span></td>
+            </tr>
+            <tr>
+                <td> <label >State:</label></td>
+                <td> <input type="text" id="state" class="in_size" required>
+                <span id="stateCheck" ></span></td>
+            </tr>
+            <tr>
+                <td> <label >Qualification</label></td>
+                <td> <select name="Qualification" id="Qualification" required>
+                    <option value="Select Qualification">Select Qualification </option>
+                    <option value="B.com">B.com</option>
+                    <option value="B.sc">B.sc</option>
+                    <option value="B.E">B.E</option>
+                    <option value="B.A">B.A</option>
+                    <option value="">B.A</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label class="specialization" >Specialization</label></td>
+                <td>
+                    <input type="radio" name="box" required>Computer Science <br>
+                    <input type="radio" name="box" required>Information Technology <br>
+                    <input type="radio" name="box" required>Computer Architecture <br>
+                    <input type="radio" name="box" required>Tele Communication
+                </td>
+            </tr>
+            <tr>
+                <td><Label>Password:</Label></td>
+                <td><input type="password" id="password" class="in_size" required>
+                <span id="pswCheck"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Registered" id="btn">
+                </td>
+            </tr>
+        </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="validation.js"></script>
+    </form>
+</body>
+</html>
