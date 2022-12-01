@@ -51,56 +51,58 @@
 </head>
 
 <body>
-    <form action="" method="get" onsubmit="return validation()">
+    <form action="aget-method.php" id= "user-form" method="get" >
         <table >
             <tr>
                 <td><label>First Name:</label></td>
-                <td><input type="text" id="firstname" class="in_size" name="userName" required><span id="firsNameCheck"></span></td>
+                <td><input type="text" id="firstname" class="in_size" name="field" autocomplete="off" autofocus="autofocus" required> <br><span id="firstNameCheck"></span></td>
             </tr>
-            <tr>
+             <tr>
                 <td><label>Last Name:</label></td>
-                <td><input type="text" id="lastname" name="userName" class="in_size" required><span id="lastNameCheck"></span></td>
+                <td><input type="text" id="lastname" name="field" class="in_size" autocomplete="off" autofocus="autofocus" required> <br><span id="lastNameCheck"></span></td>
             </tr>
-            <tr>
+           <tr>
                 <td><label>Email:</label></td>
-                <td><input type="email" id="email" name="email" class="in_size" required> <span id="emailCheck"></span></td>
+                <td><input type="text" id="email" name="field" class="in_size" autocomplete="off" autofocus="autofocus" required>
+                    <br>   <span id="emailCheck"></span>  </td>
             </tr>
-            <tr>
+             <tr>
                 <td><label>Mobile:</label></td>
-                <td><input type="tel" id="Mobile" name="Mobile" class="in_size" required><span id="mobileCheck"></span></td>
+                <td><input type="tel" id="mobile" name="Mobile" class="in_size" autocomplete="off"  autofocus="autofocus" required> <br><span id="mobileCheck"></span></td>
             </tr>
             <tr>
                 <td><label>Gender:</label></td>
-                <td><input type="radio" id="gender" name="gender" required >Male  &nbsp; <input type="radio" id="gender" name="gender" required>Female &nbsp; <span id="genderCheck"></span></td>
+                <td><input type="radio"  name="gender" >Male  &nbsp; <input type="radio"  name="gender" >Female &nbsp; <span id="genderCheck"></span></td>
                 <td></td>
                
             </tr>
             <tr>
                <td><label >Date Of Birth:</label></td>
-               <td><input type="date" class="in_size" required> <span id="dateCheck"></span></td>
+               <td><input type="date" class="in_size" ><br> </td>
             </tr>
             <tr>
                 <td><label >Address:</label></td>
-                <td><textarea name="address" id="address" class="in_size" required></textarea> <span id="addressCheck"></span></td>
+                <td><textarea name="address" id="address" class="in_size" autocomplete="off" autofocus="autofocus" required></textarea><br> <span id="addressCheck"></span></td>
             </tr>
             <tr>
                 <td> <label>City:</label></td>
-                <td> <input type="text" id="city" class="in_size" required>
-                <span id="cityCheck"></span></td>
+                <td> <input type="text" id="city" class="in_size" autocomplete="off" autofocus="autofocus" required>
+                    <br><span id="cityCheck"></span></td>
             </tr>
             <tr>
                 <td> <label >Area Pin:</label></td>
-                <td> <input type="number" id="pin" class="in_size" required> 
+                <td> <input type="text" id="pin" class="in_size"autocomplete="off" autofocus="autofocus" required> 
+                    <br>
                 <span id="pinCheck"></span></td>
             </tr>
             <tr>
                 <td> <label >State:</label></td>
-                <td> <input type="text" id="state" class="in_size" required>
-                <span id="stateCheck" ></span></td>
+                <td> <input type="text" id="state" class="in_size"autocomplete="off" autofocus="autofocus" required><br>
+                <span id="stateCheck"  ></span></td>
             </tr>
             <tr>
                 <td> <label >Qualification</label></td>
-                <td> <select name="Qualification" id="Qualification" required>
+                <td> <select name="Qualification" id="Qualification" >
                     <option value="Select Qualification">Select Qualification </option>
                     <option value="B.com">B.com</option>
                     <option value="B.sc">B.sc</option>
@@ -112,24 +114,24 @@
             <tr>
                 <td><label class="specialization" >Specialization</label></td>
                 <td>
-                    <input type="radio" name="box" required>Computer Science <br>
-                    <input type="radio" name="box" required>Information Technology <br>
-                    <input type="radio" name="box" required>Computer Architecture <br>
-                    <input type="radio" name="box" required>Tele Communication
+                    <input type="radio" name="box" >Computer Science <br>
+                    <input type="radio" name="box" >Information Technology <br>
+                    <input type="radio" name="box" >Computer Architecture <br>
+                    <input type="radio" name="box" >Tele Communication
                 </td>
             </tr>
             <tr>
                 <td><Label>Password:</Label></td>
-                <td><input type="password" id="password" class="in_size" required>
+                <td><input type="password" id="password" class="in_size" autocomplete="off" autofocus="autofocus" required><br>
                 <span id="pswCheck"></span></td>
             </tr>
             <tr>
                 <td>
-                    <input type="submit" value="Registered" id="btn">
+                    <input type="submit"  onclick=" return validation()"value="Registered" id="btn">
                 </td>
             </tr>
         </table>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
     <script src="validation.js"></script>
     </form>
 </body>
