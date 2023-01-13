@@ -168,6 +168,5 @@
               return false;
             }
           }
-          form.submit();
-        }
+    }
         
